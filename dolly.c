@@ -12,6 +12,7 @@
 
 #define N 50
 
+void clear();
 void printGrass(unsigned n);
 
 int main() {
@@ -33,7 +34,7 @@ int main() {
 
 		sleep(1);
 
-		system("clear");
+		clear();
 
 		printf("              __  _\n");
 		printf("          .-.\'  `; `-._  __  _\n");
@@ -49,7 +50,7 @@ int main() {
 
 		sleep(1);
 
-		system("clear");
+		clear();
 
 		printf("\n\n\n");
 		printf("           __  _\n");
@@ -67,6 +68,14 @@ int main() {
 	}
 
 	return 0;
+}
+
+void clear() {
+	#if defined(WIN32)
+		system("cls");
+	#else
+		system("clear");
+	#endif
 }
 
 void printGrass(unsigned n) {
