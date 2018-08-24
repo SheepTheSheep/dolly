@@ -18,7 +18,7 @@ void printGrass(unsigned n);
 int main() {
 
 	while (1) {
-		system("clear");
+		clear();
 
 		printf("\n\n\n");
 		printf("                 __  _\n");
